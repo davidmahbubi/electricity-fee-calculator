@@ -8,30 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		C019E9FA2A08FF6200EFA38E /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C019E9F92A08FF6200EFA38E /* ResultView.swift */; };
+		C024C0572A0CDB8C00408D5A /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024C0562A0CDB8C00408D5A /* Appliance.swift */; };
 		C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D5E932A06746500947F0B /* ApplianceItemCard.swift */; };
 		C03D5E982A06912200947F0B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = C03D5E972A06912200947F0B /* SQLite */; };
 		C045B2F72A04FFBE00992B32 /* ApplianceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */; };
-		C045B2FB2A05124800992B32 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045B2FA2A05124800992B32 /* State.swift */; };
-		C04B88042A03B9B20053F3C9 /* Electricity_Cost_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88032A03B9B20053F3C9 /* Electricity_Cost_AppApp.swift */; };
+		C04B88042A03B9B20053F3C9 /* ElectricityCostApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88032A03B9B20053F3C9 /* ElectricityCostApp.swift */; };
 		C04B88062A03B9B20053F3C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88052A03B9B20053F3C9 /* ContentView.swift */; };
 		C04B88082A03B9B20053F3C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04B88072A03B9B20053F3C9 /* Assets.xcassets */; };
 		C04B880B2A03B9B20053F3C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04B880A2A03B9B20053F3C9 /* Preview Assets.xcassets */; };
-		C04B88122A03C26A0053F3C9 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88112A03C26A0053F3C9 /* Calculator.swift */; };
-		C0D77A372A0BAB4F003A76D2 /* RepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D77A362A0BAB4F003A76D2 /* RepeatView.swift */; };
+		C04B88122A03C26A0053F3C9 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88112A03C26A0053F3C9 /* CalculatorView.swift */; };
+		C0D77A372A0BAB4F003A76D2 /* AvgUsageRepeatForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D77A362A0BAB4F003A76D2 /* AvgUsageRepeatForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C019E9F92A08FF6200EFA38E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		C024C0562A0CDB8C00408D5A /* Appliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appliance.swift; sourceTree = "<group>"; };
 		C03D5E932A06746500947F0B /* ApplianceItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceItemCard.swift; sourceTree = "<group>"; };
 		C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceForm.swift; sourceTree = "<group>"; };
-		C045B2FA2A05124800992B32 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		C04B88002A03B9B20053F3C9 /* Electricity Cost App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Cost App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C04B88032A03B9B20053F3C9 /* Electricity_Cost_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Electricity_Cost_AppApp.swift; sourceTree = "<group>"; };
+		C04B88032A03B9B20053F3C9 /* ElectricityCostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityCostApp.swift; sourceTree = "<group>"; };
 		C04B88052A03B9B20053F3C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C04B88072A03B9B20053F3C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C04B880A2A03B9B20053F3C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C04B88112A03C26A0053F3C9 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
-		C0D77A362A0BAB4F003A76D2 /* RepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatView.swift; sourceTree = "<group>"; };
+		C04B88112A03C26A0053F3C9 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		C0D77A362A0BAB4F003A76D2 /* AvgUsageRepeatForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvgUsageRepeatForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +46,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C024C0522A0CDA7C00408D5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C024C0532A0CDB0400408D5A /* Calculator */,
+				C04B88052A03B9B20053F3C9 /* ContentView.swift */,
+				C019E9F92A08FF6200EFA38E /* ResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C024C0532A0CDB0400408D5A /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				C024C0542A0CDB1200408D5A /* Partials */,
+				C04B88112A03C26A0053F3C9 /* CalculatorView.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		C024C0542A0CDB1200408D5A /* Partials */ = {
+			isa = PBXGroup;
+			children = (
+				C0D77A362A0BAB4F003A76D2 /* AvgUsageRepeatForm.swift */,
+				C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */,
+			);
+			path = Partials;
+			sourceTree = "<group>";
+		};
+		C024C0552A0CDB7700408D5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C024C0562A0CDB8C00408D5A /* Appliance.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C03D5E922A06745000947F0B /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,16 +109,12 @@
 		C04B88022A03B9B20053F3C9 /* Electricity Cost App */ = {
 			isa = PBXGroup;
 			children = (
+				C024C0552A0CDB7700408D5A /* Models */,
+				C024C0522A0CDA7C00408D5A /* Views */,
 				C03D5E922A06745000947F0B /* Components */,
-				C04B88032A03B9B20053F3C9 /* Electricity_Cost_AppApp.swift */,
-				C04B88052A03B9B20053F3C9 /* ContentView.swift */,
+				C04B88032A03B9B20053F3C9 /* ElectricityCostApp.swift */,
 				C04B88072A03B9B20053F3C9 /* Assets.xcassets */,
 				C04B88092A03B9B20053F3C9 /* Preview Content */,
-				C04B88112A03C26A0053F3C9 /* Calculator.swift */,
-				C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */,
-				C045B2FA2A05124800992B32 /* State.swift */,
-				C019E9F92A08FF6200EFA38E /* ResultView.swift */,
-				C0D77A362A0BAB4F003A76D2 /* RepeatView.swift */,
 			);
 			path = "Electricity Cost App";
 			sourceTree = "<group>";
@@ -172,13 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04B88062A03B9B20053F3C9 /* ContentView.swift in Sources */,
-				C04B88042A03B9B20053F3C9 /* Electricity_Cost_AppApp.swift in Sources */,
+				C04B88042A03B9B20053F3C9 /* ElectricityCostApp.swift in Sources */,
 				C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */,
-				C04B88122A03C26A0053F3C9 /* Calculator.swift in Sources */,
-				C045B2FB2A05124800992B32 /* State.swift in Sources */,
+				C04B88122A03C26A0053F3C9 /* CalculatorView.swift in Sources */,
+				C024C0572A0CDB8C00408D5A /* Appliance.swift in Sources */,
 				C019E9FA2A08FF6200EFA38E /* ResultView.swift in Sources */,
 				C045B2F72A04FFBE00992B32 /* ApplianceForm.swift in Sources */,
-				C0D77A372A0BAB4F003A76D2 /* RepeatView.swift in Sources */,
+				C0D77A372A0BAB4F003A76D2 /* AvgUsageRepeatForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

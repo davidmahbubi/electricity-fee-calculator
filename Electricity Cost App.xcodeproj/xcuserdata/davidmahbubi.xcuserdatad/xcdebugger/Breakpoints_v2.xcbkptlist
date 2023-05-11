@@ -7,20 +7,28 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "84F72C26-FBB4-413E-BD48-1FC5D53619E9"
-            shouldBeEnabled = "No"
+            uuid = "8AAFDAA7-9D8F-42F5-8AF3-DBAF6711FB15"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Electricity Cost App/ApplianceForm.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "body"
             landmarkType = "24">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Sound">
+                  <ActionContent
+                     soundName = "Hero">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
             <Locations>
                <Location
-                  uuid = "84F72C26-FBB4-413E-BD48-1FC5D53619E9 - d4d62e0ddde7deb4"
+                  uuid = "8AAFDAA7-9D8F-42F5-8AF3-DBAF6711FB15 - d4d62e0ddde7dded"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +38,12 @@
                   urlString = "file:///Users/davidmahbubi/Documents/Playgrounds/Electricity%20Cost%20App/Electricity%20Cost%20App/ApplianceForm.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "1796">
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "2540">
                </Location>
                <Location
-                  uuid = "84F72C26-FBB4-413E-BD48-1FC5D53619E9 - d4d62e0ddde7deb4"
+                  uuid = "8AAFDAA7-9D8F-42F5-8AF3-DBAF6711FB15 - d4d62e0ddde7ddca"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,9 +53,9 @@
                   urlString = "file:///Users/davidmahbubi/Documents/Playgrounds/Electricity%20Cost%20App/Electricity%20Cost%20App/ApplianceForm.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "756">
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "2660">
                </Location>
             </Locations>
          </BreakpointContent>

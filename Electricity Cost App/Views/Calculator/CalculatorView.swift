@@ -110,6 +110,6 @@ struct Calculator: View {
 
 struct Calculator_Previews: PreviewProvider {
     static var previews: some View {
-        Calculator(appliances: [Appliance(name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day)])
+        Calculator(appliances: [Appliance(name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday])])
     }
 }

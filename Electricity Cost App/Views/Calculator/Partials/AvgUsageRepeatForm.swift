@@ -7,11 +7,25 @@
 
 import SwiftUI
 
+enum AvgUsageRepeat: String, CaseIterable, Identifiable {
+    case sunday = "Every Sunday"
+    case monday = "Every Monday"
+    case tuesday = "Every Tuesday"
+    case wednesday = "Every Wednesday"
+    case thursday = "Every Thursday"
+    case friday = "Every Friday"
+    case saturday = "Every Saturday"
+    
+    var id: RawValue {
+        self.rawValue
+    }
+}
+
 struct RepeatView: View {
     
     let allowedRepeatCycles = ["Every Sunday", "Every Monday", "Every Tuesday", "Every Wednesday", "Every Thursday", "Every Friday", "Every Saturday"]
     
-    @State private var selectedItems: Set<String> = []
+    @Binding var selectedItems: Set<AvgUsageRepeat>
     
     var body: some View {
         List {
@@ -24,17 +38,16 @@ struct RepeatView: View {
                 }
             }
             Section(header: Text("Single Select")) {
-                ForEach(allowedRepeatCycles, id: \.self) { item in
-                    MultipleCheckmarkRow(title: item, isSelected: selectedItems.contains(item)) {
-                        if selectedItems.contains(item) {
-                            selectedItems.remove(item)
+                ForEach(AvgUsageRepeat.allCases, id: \.self) { item in
+                    MultipleCheckmarkRow(title: item.rawValue, isSelected: selectedItems.contains(item.self), action: {
+                        if selectedItems.contains(item.self) {
+                            selectedItems.remove(item.self)
                         } else {
-                            selectedItems.insert(item)
+                            selectedItems.insert(item.self)
                         }
-                    }
+                    })
                 }
-            }
-        }
+            }        }
         .navigationTitle("Repeat")
     }
 }
@@ -60,7 +73,10 @@ struct MultipleCheckmarkRow: View {
 }
 
 struct RepeatView_Previews: PreviewProvider {
+    
+    @State private static var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = []
+    
     static var previews: some View {
-        RepeatView()
+        RepeatView(selectedItems: $selectedAvgUsageRepeat)
     }
 }

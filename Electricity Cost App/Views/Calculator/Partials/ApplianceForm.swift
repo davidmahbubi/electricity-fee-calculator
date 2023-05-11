@@ -12,6 +12,15 @@ enum InputMode {
     case VOLTS_AMP
 }
 
+enum AvgUsageType: String, CaseIterable, Identifiable {
+    case minutes_day = "Minutes / Day"
+    case hours_day = "Hours / Day"
+    
+    var id: RawValue {
+        self.rawValue
+    }
+}
+
 struct ApplianceForm: SwiftUI.View {
     
     @Environment(\.presentationMode) var presentationMode
@@ -22,6 +31,7 @@ struct ApplianceForm: SwiftUI.View {
     @State private var selectedAverageUsageUnit: AvgUsageType = .hours_day
     @State private var selectedIconIndex: Int = 0
     @State private var isInverter: Bool = false
+    @State private var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = []
     
     @Binding var appliancesList: [Appliance]
     
@@ -59,7 +69,7 @@ struct ApplianceForm: SwiftUI.View {
                         }
                         .pickerStyle(MenuPickerStyle())
                     }
-                    NavigationLink(destination: RepeatView()) {
+                    NavigationLink(destination: RepeatView(selectedItems: $selectedAvgUsageRepeat)) {
                         Text("Repeat Every")
                     }
                 }
@@ -84,9 +94,10 @@ struct ApplianceForm: SwiftUI.View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         print(wattage)
-                        let appliance: Appliance = Appliance(name: name, wattage: UInt8(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit)
+                        let appliance: Appliance = Appliance(name: name, wattage: UInt8(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat)
                         appliancesList.append(appliance)
                         self.presentationMode.wrappedValue.dismiss()
+                        
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
