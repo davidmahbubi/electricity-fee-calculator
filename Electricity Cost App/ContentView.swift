@@ -9,13 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Spacer()
+                Text("Electricity Calculator")
+                    .font(.largeTitle)
+                Image("main_logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
+                Spacer()
+                NavigationLink(destination: Calculator()) {
+                    Text("Count my Electricity")
+                        .foregroundColor(.white)
+                }
+                .frame(width: 300, height: 70)
+                .background(.blue)
+                .cornerRadius(15)
+                .padding(.top, 25)
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
