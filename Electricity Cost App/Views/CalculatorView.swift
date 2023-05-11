@@ -23,7 +23,7 @@ struct Calculator: View {
     
     var body: some View {
         VStack {
-            ZStack {
+            ZStack {    
                 RoundedRectangle(cornerRadius: 20, style: .continuous).fill(.blue)
                     .frame(height: 90)
                 HStack {

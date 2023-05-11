@@ -49,20 +49,12 @@
 		C024C0522A0CDA7C00408D5A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C024C0532A0CDB0400408D5A /* Calculator */,
+				C04B88112A03C26A0053F3C9 /* CalculatorView.swift */,
+				C024C0542A0CDB1200408D5A /* Partials */,
 				C04B88052A03B9B20053F3C9 /* ContentView.swift */,
 				C019E9F92A08FF6200EFA38E /* ResultView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C024C0532A0CDB0400408D5A /* Calculator */ = {
-			isa = PBXGroup;
-			children = (
-				C024C0542A0CDB1200408D5A /* Partials */,
-				C04B88112A03C26A0053F3C9 /* CalculatorView.swift */,
-			);
-			path = Calculator;
 			sourceTree = "<group>";
 		};
 		C024C0542A0CDB1200408D5A /* Partials */ = {
