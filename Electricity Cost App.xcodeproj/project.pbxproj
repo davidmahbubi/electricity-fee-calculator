@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C019E9FA2A08FF6200EFA38E /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C019E9F92A08FF6200EFA38E /* ResultView.swift */; };
 		C024C0572A0CDB8C00408D5A /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024C0562A0CDB8C00408D5A /* Appliance.swift */; };
+		C024C0592A0CDE8C00408D5A /* MultipleCheckmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */; };
 		C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D5E932A06746500947F0B /* ApplianceItemCard.swift */; };
 		C045B2F72A04FFBE00992B32 /* ApplianceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */; };
 		C04B88042A03B9B20053F3C9 /* ElectricityCostApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88032A03B9B20053F3C9 /* ElectricityCostApp.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		C019E9F92A08FF6200EFA38E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		C024C0562A0CDB8C00408D5A /* Appliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appliance.swift; sourceTree = "<group>"; };
+		C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCheckmarkRow.swift; sourceTree = "<group>"; };
 		C03D5E932A06746500947F0B /* ApplianceItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceItemCard.swift; sourceTree = "<group>"; };
 		C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceForm.swift; sourceTree = "<group>"; };
 		C04B88002A03B9B20053F3C9 /* Electricity Cost App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Cost App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				C03D5E932A06746500947F0B /* ApplianceItemCard.swift */,
+				C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			files = (
 				C04B88062A03B9B20053F3C9 /* ContentView.swift in Sources */,
 				C04B88042A03B9B20053F3C9 /* ElectricityCostApp.swift in Sources */,
+				C024C0592A0CDE8C00408D5A /* MultipleCheckmarkRow.swift in Sources */,
 				C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */,
 				C04B88122A03C26A0053F3C9 /* CalculatorView.swift in Sources */,
 				C024C0572A0CDB8C00408D5A /* Appliance.swift in Sources */,
@@ -327,6 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Electricity Cost App/Preview Content\"";
+				DEVELOPMENT_TEAM = AHLML969C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -355,6 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Electricity Cost App/Preview Content\"";
+				DEVELOPMENT_TEAM = AHLML969C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

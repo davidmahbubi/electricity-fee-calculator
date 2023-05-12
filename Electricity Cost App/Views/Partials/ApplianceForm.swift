@@ -94,7 +94,7 @@ struct ApplianceForm: SwiftUI.View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         print(wattage)
-                        let appliance: Appliance = Appliance(name: name, wattage: UInt8(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat)
+                        let appliance: Appliance = Appliance(name: name, wattage: UInt16(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat)
                         appliancesList.append(appliance)
                         self.presentationMode.wrappedValue.dismiss()
                         

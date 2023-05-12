@@ -10,7 +10,7 @@ import SwiftUI
 struct ApplianceItemCard: View {
     
     @Binding var applianceName: String
-    @Binding var wattage: UInt8
+    @Binding var wattage: UInt16
     @Binding var applianceIcon: String
     
     var idx: Int
@@ -68,7 +68,7 @@ struct ApplianceItemCard: View {
 struct ApplianceItemCard_Previews: PreviewProvider {
     
     @State static var prevName: String = "Testing"
-    @State static var wattage: UInt8 = 80
+    @State static var wattage: UInt16 = 80
     @State static var applianceIcon: String = "stove"
     static var idx: Int = 0
     

@@ -15,6 +15,7 @@ struct Calculator: View {
     @State var showAlert: Bool = false
     @State var showResult: Int? = nil
     @State var applianceIdx: Int = 0
+    @State var isNavigationLinkActive = false
     
     var rowsItem: [GridItem] = [
         GridItem(.flexible()),
@@ -71,17 +72,21 @@ struct Calculator: View {
                         .padding(.top)
                 }
             }
-            NavigationLink(destination: ResultView(appliances: $appliances)) {
+            NavigationLink {
+                    ResultView(appliances: $appliances, electricityRate: $electricityRate)
+            } label: {
                 Text("Calculate Now")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 70)
-                    .foregroundColor(.white)
-                    .background(.blue)
-                    .cornerRadius(15)
-                    .padding(.top, 25)
-                    .padding(.trailing, 20)
-                    .padding(.leading, 20)
+                  .frame(maxWidth: .infinity)
+                  .frame(height: 70)
+                  .foregroundColor(.white)
+                  .background(electricityRate == "" ? .gray : .blue)
+                  .cornerRadius(15)
+                  .padding(.top, 25)
+                  .padding(.trailing, 20)
+                  .padding(.leading, 20)
+                                  
             }
+            .disabled(electricityRate == "" ? true : false)
         }
         .navigationTitle("Home Appliances")
         .toolbar {

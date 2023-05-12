@@ -21,6 +21,9 @@ enum AvgUsageRepeat: String, CaseIterable, Identifiable {
     }
 }
 
+let repeatEveryWeekendValue: Set<AvgUsageRepeat> = [.saturday, .sunday]
+let repeatEveryWeekdaysValue: Set<AvgUsageRepeat> = [.monday, .tuesday, .wednesday, .thursday, .friday]
+
 struct RepeatView: View {
     
     let allowedRepeatCycles = ["Every Sunday", "Every Monday", "Every Tuesday", "Every Wednesday", "Every Thursday", "Every Friday", "Every Saturday"]
@@ -30,11 +33,14 @@ struct RepeatView: View {
     var body: some View {
         List {
             Section(header: Text("Quick Select")) {
+                Button("Everyday") {
+                    selectedItems = Set<AvgUsageRepeat>.init(AvgUsageRepeat.allCases)
+                }
                 Button("Every Weekdays") {
-                    
+                    selectedItems = repeatEveryWeekdaysValue
                 }
                 Button("Every Weekend") {
-                    
+                    selectedItems = repeatEveryWeekendValue
                 }
             }
             Section(header: Text("Single Select")) {
@@ -49,26 +55,6 @@ struct RepeatView: View {
                 }
             }        }
         .navigationTitle("Repeat")
-    }
-}
-
-struct MultipleCheckmarkRow: View {
-    
-    let title: String
-    let isSelected: Bool
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            HStack {
-                Text(title)
-                Spacer()
-                if isSelected {
-                    Image(systemName: "checkmark")
-                        .foregroundColor(.blue)
-                }
-            }
-        }
     }
 }
 
