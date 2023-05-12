@@ -48,7 +48,7 @@ struct ResultView: View {
                         Text(
                             formatCurrencyNumber(number: appliance.countCostPerMinute(electricityRate: UInt(electricityRate)!))
                         )
-                            .foregroundColor(.gray)
+                        .foregroundColor(.gray)
                     }
                     HStack {
                         Text("Cost per Hour")

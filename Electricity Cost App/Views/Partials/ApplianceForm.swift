@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 enum InputMode {
     case WATTAGE
@@ -54,6 +55,12 @@ struct ApplianceForm: SwiftUI.View {
                     HStack {
                         TextField("Wattage", text: $wattage)
                             .keyboardType(.numberPad)
+                            .onReceive(Just(wattage)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    wattage = filtered
+                                }
+                            }
                         Text("Watt")
                     }
                     Toggle("Inverter Device", isOn: $isInverter)
@@ -62,6 +69,12 @@ struct ApplianceForm: SwiftUI.View {
                     HStack {
                         TextField("Average Usage", text: $averageUsage)
                             .keyboardType(.numberPad)
+                            .onReceive(Just(averageUsage)) { newValue in
+                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                if filtered != newValue {
+                                    averageUsage = filtered
+                                }
+                            }
                         Picker("", selection: $selectedAverageUsageUnit) {
                             ForEach(AvgUsageType.allCases) { list in
                                 Text(list.rawValue).tag(list)

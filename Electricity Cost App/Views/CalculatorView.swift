@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct Calculator: View {
     
@@ -32,7 +33,12 @@ struct Calculator: View {
                         .foregroundColor(.white)
                         .padding()
                         .accentColor(.white)
-
+                        .onReceive(Just(electricityRate)) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if filtered != newValue {
+                                electricityRate = filtered
+                            }
+                        }
                     Text("/ KWh")
                         .padding(.trailing)
                         .foregroundColor(.white)
@@ -67,24 +73,24 @@ struct Calculator: View {
                             )
                         }
                     }
-                        .padding(.trailing)
-                        .padding(.leading)
-                        .padding(.top)
+                    .padding(.trailing)
+                    .padding(.leading)
+                    .padding(.top)
                 }
             }
             NavigationLink {
-                    ResultView(appliances: $appliances, electricityRate: $electricityRate)
+                ResultView(appliances: $appliances, electricityRate: $electricityRate)
             } label: {
                 Text("Calculate Now")
-                  .frame(maxWidth: .infinity)
-                  .frame(height: 70)
-                  .foregroundColor(.white)
-                  .background(electricityRate == "" ? .gray : .blue)
-                  .cornerRadius(15)
-                  .padding(.top, 25)
-                  .padding(.trailing, 20)
-                  .padding(.leading, 20)
-                                  
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 70)
+                    .foregroundColor(.white)
+                    .background(electricityRate == "" ? .gray : .blue)
+                    .cornerRadius(15)
+                    .padding(.top, 25)
+                    .padding(.trailing, 20)
+                    .padding(.leading, 20)
+                
             }
             .disabled(electricityRate == "" ? true : false)
         }
