@@ -33,6 +33,7 @@ struct ApplianceForm: SwiftUI.View {
     @State private var selectedIconIndex: Int = 0
     @State private var isInverter: Bool = false
     @State private var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = []
+    @State private var isInvalidAlertPresented: Bool = false
     
     @Binding var appliancesList: [Appliance]
     
@@ -43,7 +44,7 @@ struct ApplianceForm: SwiftUI.View {
     ]
     
     let defaults = UserDefaults.standard
-    let availableIcons = ["air.conditioner.horizontal", "stove", "lamp.floor", "washer"]
+    let availableIcons = ["pc", "air.conditioner.horizontal", "stove", "lamp.floor", "washer", "gamecontroller", "tv", "hifispeaker" , "cup.and.saucer", "bolt.car" , "iphone.gen1", "fan.floor"]
     
     var body: some SwiftUI.View {
         NavigationView {
@@ -63,7 +64,7 @@ struct ApplianceForm: SwiftUI.View {
                             }
                         Text("Watt")
                     }
-                    Toggle("Inverter Device", isOn: $isInverter)
+//                    Toggle("Inverter Device", isOn: $isInverter)
                 }
                 Section(header: Text("Usage")) {
                     HStack {
@@ -106,11 +107,13 @@ struct ApplianceForm: SwiftUI.View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        print(wattage)
-                        let appliance: Appliance = Appliance(name: name, wattage: UInt16(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat)
-                        appliancesList.append(appliance)
-                        self.presentationMode.wrappedValue.dismiss()
-                        
+                        if isFormValid() {
+                            let appliance: Appliance = Appliance(name: name, wattage: UInt16(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat)
+                            appliancesList.append(appliance)
+                            self.presentationMode.wrappedValue.dismiss()
+                        } else {
+                            isInvalidAlertPresented = true
+                        }
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -120,10 +123,16 @@ struct ApplianceForm: SwiftUI.View {
                 }
             }
             .onAppear {
-                
+                print("Hello world")
+            }
+            .alert(isPresented: $isInvalidAlertPresented) {
+                Alert(title: Text("Form Incomplete"), message: Text("All fields should be filled!"))
             }
         }
+        .navigationTitle("Hello world")
     }
+    
+    func isFormValid() -> Bool { !name.isEmpty && !wattage.isEmpty && !averageUsage.isEmpty }
 }
 
 struct ApplianceForm_Previews: PreviewProvider {

@@ -74,7 +74,7 @@ struct ResultView: View {
                 }
             }
         }
-        .navigationTitle("Result")
+        .navigationTitle("Calculation Result")
     }
     
     func formatCurrencyNumber(number: Float) -> String {

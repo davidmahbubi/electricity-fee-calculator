@@ -26,8 +26,8 @@ struct Calculator: View {
     var body: some View {
         VStack {
             ZStack {    
-                RoundedRectangle(cornerRadius: 20, style: .continuous).fill(.blue)
-                    .frame(height: 90)
+                RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(.blue, lineWidth: 3.5)
+                    .frame(height: 70)
                 HStack {
                     TextField("Input electriciy rate", text: $electricityRate)
                         .foregroundColor(.white)
@@ -41,7 +41,6 @@ struct Calculator: View {
                         }
                     Text("/ KWh")
                         .padding(.trailing)
-                        .foregroundColor(.white)
                 }
             }
             .padding(.leading)
@@ -54,13 +53,15 @@ struct Calculator: View {
                             .font(.system(size: 60))
                             .padding(.bottom, 5)
                             .padding(.top, 40)
-                        Text("No Appliances.\n Click \"Add\" button to add one")
+                        Text("No Appliances 🙁")
+                            .multilineTextAlignment(.center)
+                        Text("Click \"Add\" button to add one")
                             .multilineTextAlignment(.center)
                     }
                     .padding(.trailing)
                     .padding(.leading)
                 } else {
-                    LazyVGrid(columns: rowsItem, spacing: 20) {
+                    LazyVGrid(columns: rowsItem, spacing: 8) {
                         ForEach(0..<$appliances.count, id: \.self) { idx in
                             ApplianceItemCard(
                                 applianceName: $appliances[idx].name,
@@ -94,7 +95,7 @@ struct Calculator: View {
             }
             .disabled(electricityRate == "" ? true : false)
         }
-        .navigationTitle("Home Appliances")
+        .navigationTitle("Appliances")
         .toolbar {
             Button("Add") {
                 showFormModal = true
@@ -121,6 +122,16 @@ struct Calculator: View {
 
 struct Calculator_Previews: PreviewProvider {
     static var previews: some View {
-        Calculator(appliances: [Appliance(name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday])])
+        Calculator(appliances: [
+            Appliance(
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday]
+            ),
+            Appliance(
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday]
+            ),
+            Appliance(
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday]
+            ),
+        ])
     }
 }

@@ -9,22 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack {
                 Spacer()
-                Text("Electricity Calculator")
+                Text("ElectriWise")
                     .font(.largeTitle)
-                Image("main_logo")
+                Image("primary_logo")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 200)
+                    .padding(.bottom, 20)
+                Text("Empowering You to Track and Control Your Electric Bill")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: 300)
                 Spacer()
                 NavigationLink(destination: Calculator()) {
-                    Text("Count my Electricity")
+                    Text("Calculate my Electricity")
                         .foregroundColor(.white)
                 }
                 .frame(width: 300, height: 70)
-                .background(.blue)
+                .background(Color.blue)
                 .cornerRadius(15)
                 .padding(.top, 25)
             }
