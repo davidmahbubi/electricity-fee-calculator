@@ -12,7 +12,7 @@
 		C024C0592A0CDE8C00408D5A /* MultipleCheckmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */; };
 		C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D5E932A06746500947F0B /* ApplianceItemCard.swift */; };
 		C045B2F72A04FFBE00992B32 /* ApplianceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */; };
-		C04B88042A03B9B20053F3C9 /* ElectricityCostApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88032A03B9B20053F3C9 /* ElectricityCostApp.swift */; };
+		C04B88042A03B9B20053F3C9 /* ElectriwiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88032A03B9B20053F3C9 /* ElectriwiseApp.swift */; };
 		C04B88062A03B9B20053F3C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B88052A03B9B20053F3C9 /* ContentView.swift */; };
 		C04B88082A03B9B20053F3C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04B88072A03B9B20053F3C9 /* Assets.xcassets */; };
 		C04B880B2A03B9B20053F3C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04B880A2A03B9B20053F3C9 /* Preview Assets.xcassets */; };
@@ -26,8 +26,8 @@
 		C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCheckmarkRow.swift; sourceTree = "<group>"; };
 		C03D5E932A06746500947F0B /* ApplianceItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceItemCard.swift; sourceTree = "<group>"; };
 		C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceForm.swift; sourceTree = "<group>"; };
-		C04B88002A03B9B20053F3C9 /* Electricity Cost App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electricity Cost App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C04B88032A03B9B20053F3C9 /* ElectricityCostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityCostApp.swift; sourceTree = "<group>"; };
+		C04B88002A03B9B20053F3C9 /* Electriwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Electriwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04B88032A03B9B20053F3C9 /* ElectriwiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectriwiseApp.swift; sourceTree = "<group>"; };
 		C04B88052A03B9B20053F3C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C04B88072A03B9B20053F3C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C04B880A2A03B9B20053F3C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		C04B87F72A03B9B20053F3C9 = {
 			isa = PBXGroup;
 			children = (
-				C04B88022A03B9B20053F3C9 /* Electricity Cost App */,
+				C04B88022A03B9B20053F3C9 /* Electriwise */,
 				C04B88012A03B9B20053F3C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,22 +94,22 @@
 		C04B88012A03B9B20053F3C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C04B88002A03B9B20053F3C9 /* Electricity Cost App.app */,
+				C04B88002A03B9B20053F3C9 /* Electriwise.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C04B88022A03B9B20053F3C9 /* Electricity Cost App */ = {
+		C04B88022A03B9B20053F3C9 /* Electriwise */ = {
 			isa = PBXGroup;
 			children = (
 				C024C0552A0CDB7700408D5A /* Models */,
 				C024C0522A0CDA7C00408D5A /* Views */,
 				C03D5E922A06745000947F0B /* Components */,
-				C04B88032A03B9B20053F3C9 /* ElectricityCostApp.swift */,
+				C04B88032A03B9B20053F3C9 /* ElectriwiseApp.swift */,
 				C04B88072A03B9B20053F3C9 /* Assets.xcassets */,
 				C04B88092A03B9B20053F3C9 /* Preview Content */,
 			);
-			path = "Electricity Cost App";
+			path = Electriwise;
 			sourceTree = "<group>";
 		};
 		C04B88092A03B9B20053F3C9 /* Preview Content */ = {
@@ -123,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C04B87FF2A03B9B20053F3C9 /* Electricity Cost App */ = {
+		C04B87FF2A03B9B20053F3C9 /* Electriwise */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C04B880E2A03B9B20053F3C9 /* Build configuration list for PBXNativeTarget "Electricity Cost App" */;
+			buildConfigurationList = C04B880E2A03B9B20053F3C9 /* Build configuration list for PBXNativeTarget "Electriwise" */;
 			buildPhases = (
 				C04B87FC2A03B9B20053F3C9 /* Sources */,
 				C04B87FD2A03B9B20053F3C9 /* Frameworks */,
@@ -135,11 +135,11 @@
 			);
 			dependencies = (
 			);
-			name = "Electricity Cost App";
+			name = Electriwise;
 			packageProductDependencies = (
 			);
 			productName = "Electricity Cost App";
-			productReference = C04B88002A03B9B20053F3C9 /* Electricity Cost App.app */;
+			productReference = C04B88002A03B9B20053F3C9 /* Electriwise.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C04B87FB2A03B9B20053F3C9 /* Build configuration list for PBXProject "Electricity Cost App" */;
+			buildConfigurationList = C04B87FB2A03B9B20053F3C9 /* Build configuration list for PBXProject "Electriwise" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C04B87FF2A03B9B20053F3C9 /* Electricity Cost App */,
+				C04B87FF2A03B9B20053F3C9 /* Electriwise */,
 			);
 		};
 /* End PBXProject section */
@@ -195,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04B88062A03B9B20053F3C9 /* ContentView.swift in Sources */,
-				C04B88042A03B9B20053F3C9 /* ElectricityCostApp.swift in Sources */,
+				C04B88042A03B9B20053F3C9 /* ElectriwiseApp.swift in Sources */,
 				C024C0592A0CDE8C00408D5A /* MultipleCheckmarkRow.swift in Sources */,
 				C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */,
 				C04B88122A03C26A0053F3C9 /* CalculatorView.swift in Sources */,
@@ -331,7 +331,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Electricity Cost App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Electriwise/Preview Content\"";
 				DEVELOPMENT_TEAM = AHLML969C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -364,7 +364,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Electricity Cost App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Electriwise/Preview Content\"";
 				DEVELOPMENT_TEAM = AHLML969C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -392,7 +392,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C04B87FB2A03B9B20053F3C9 /* Build configuration list for PBXProject "Electricity Cost App" */ = {
+		C04B87FB2A03B9B20053F3C9 /* Build configuration list for PBXProject "Electriwise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C04B880C2A03B9B20053F3C9 /* Debug */,
@@ -401,7 +401,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C04B880E2A03B9B20053F3C9 /* Build configuration list for PBXNativeTarget "Electricity Cost App" */ = {
+		C04B880E2A03B9B20053F3C9 /* Build configuration list for PBXNativeTarget "Electriwise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C04B880F2A03B9B20053F3C9 /* Debug */,

@@ -29,9 +29,10 @@ struct Calculator: View {
                 RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(.blue, lineWidth: 3.5)
                     .frame(height: 70)
                 HStack {
+                    Text("Rp.")
+                        .padding(.leading, 20)
                     TextField("Input electriciy rate", text: $electricityRate)
                         .foregroundColor(.white)
-                        .padding()
                         .accentColor(.white)
                         .onReceive(Just(electricityRate)) { newValue in
                             let filtered = newValue.filter { "0123456789".contains($0) }
