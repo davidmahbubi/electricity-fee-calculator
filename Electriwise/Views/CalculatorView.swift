@@ -7,8 +7,12 @@
 
 import SwiftUI
 import Combine
+import CoreData
 
-struct Calculator: View {
+struct CalculatorView: View {
+    
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name, order: .reverse)]) var applianceGet: FetchedResults<Appliances>
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     @State var appliances: [Appliance] = []
     @State private var electricityRate: String = ""
@@ -17,6 +21,7 @@ struct Calculator: View {
     @State var showResult: Int? = nil
     @State var applianceIdx: Int = 0
     @State var isNavigationLinkActive = false
+    @State var selectedCurrencySymbol: String = ""
     
     var rowsItem: [GridItem] = [
         GridItem(.flexible()),
@@ -25,13 +30,14 @@ struct Calculator: View {
     
     var body: some View {
         VStack {
-            ZStack {    
-                RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(.blue, lineWidth: 3.5)
+            
+            ZStack {
+                RoundedRectangle(cornerRadius: 15, style: .continuous)
+                    .stroke(.blue, lineWidth: 3.5)
                     .frame(height: 70)
                 HStack {
-                    Text("Rp.")
-                        .padding(.leading, 20)
                     TextField("Input electriciy rate", text: $electricityRate)
+                        .padding()
                         .foregroundColor(.white)
                         .accentColor(.white)
                         .onReceive(Just(electricityRate)) { newValue in
@@ -47,8 +53,9 @@ struct Calculator: View {
             .padding(.leading)
             .padding(.trailing)
             .padding(.top)
+            
             ScrollView {
-                if $appliances.isEmpty {
+                if applianceGet.isEmpty {
                     VStack {
                         Image(systemName: "tray")
                             .font(.system(size: 60))
@@ -63,14 +70,15 @@ struct Calculator: View {
                     .padding(.leading)
                 } else {
                     LazyVGrid(columns: rowsItem, spacing: 8) {
-                        ForEach(0..<$appliances.count, id: \.self) { idx in
+                        ForEach(applianceGet) { appliance in
                             ApplianceItemCard(
-                                applianceName: $appliances[idx].name,
-                                wattage: $appliances[idx].wattage,
-                                applianceIcon: $appliances[idx].iconName,
-                                idx: idx,
+                                applianceName: appliance.name!,
+                                wattage: UInt16(appliance.wattage),
+                                applianceIcon: appliance.icon_name!,
+                                idx: 0,
                                 onDelete: { idx in
-                                    appliances.remove(at: idx)
+                                    managedObjectContext.delete(appliance)
+                                    DataController().save(context: managedObjectContext)
                                 }
                             )
                         }
@@ -81,7 +89,7 @@ struct Calculator: View {
                 }
             }
             NavigationLink {
-                ResultView(appliances: $appliances, electricityRate: $electricityRate)
+                ResultView(electricityRate: $electricityRate)
             } label: {
                 Text("Calculate Now")
                     .frame(maxWidth: .infinity)
@@ -123,7 +131,7 @@ struct Calculator: View {
 
 struct Calculator_Previews: PreviewProvider {
     static var previews: some View {
-        Calculator(appliances: [
+        CalculatorView(appliances: [
             Appliance(
                 name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday]
             ),

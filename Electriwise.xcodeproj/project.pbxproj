@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C003B9CB2A135CFC00084371 /* ApplianceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C003B9C92A135CFC00084371 /* ApplianceModel.xcdatamodeld */; };
+		C003B9CE2A135D7900084371 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003B9CD2A135D7900084371 /* DataController.swift */; };
+		C003B9D02A13774300084371 /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003B9CF2A13774300084371 /* Appliance.swift */; };
+		C01033202A12882E00677099 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C010331F2A12882D00677099 /* OnboardingView.swift */; };
 		C019E9FA2A08FF6200EFA38E /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C019E9F92A08FF6200EFA38E /* ResultView.swift */; };
-		C024C0572A0CDB8C00408D5A /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024C0562A0CDB8C00408D5A /* Appliance.swift */; };
 		C024C0592A0CDE8C00408D5A /* MultipleCheckmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */; };
 		C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D5E932A06746500947F0B /* ApplianceItemCard.swift */; };
 		C045B2F72A04FFBE00992B32 /* ApplianceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */; };
@@ -21,8 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C003B9CA2A135CFC00084371 /* ApplianceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApplianceModel.xcdatamodel; sourceTree = "<group>"; };
+		C003B9CD2A135D7900084371 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		C003B9CF2A13774300084371 /* Appliance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Appliance.swift; path = ../../../../../.Trash/Appliance.swift; sourceTree = "<group>"; };
+		C010331F2A12882D00677099 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C019E9F92A08FF6200EFA38E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		C024C0562A0CDB8C00408D5A /* Appliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appliance.swift; sourceTree = "<group>"; };
 		C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCheckmarkRow.swift; sourceTree = "<group>"; };
 		C03D5E932A06746500947F0B /* ApplianceItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceItemCard.swift; sourceTree = "<group>"; };
 		C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceForm.swift; sourceTree = "<group>"; };
@@ -53,6 +59,7 @@
 				C024C0542A0CDB1200408D5A /* Partials */,
 				C04B88052A03B9B20053F3C9 /* ContentView.swift */,
 				C019E9F92A08FF6200EFA38E /* ResultView.swift */,
+				C010331F2A12882D00677099 /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -69,7 +76,9 @@
 		C024C0552A0CDB7700408D5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C024C0562A0CDB8C00408D5A /* Appliance.swift */,
+				C003B9CF2A13774300084371 /* Appliance.swift */,
+				C003B9C92A135CFC00084371 /* ApplianceModel.xcdatamodeld */,
+				C003B9CD2A135D7900084371 /* DataController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,14 +204,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04B88062A03B9B20053F3C9 /* ContentView.swift in Sources */,
+				C003B9CE2A135D7900084371 /* DataController.swift in Sources */,
 				C04B88042A03B9B20053F3C9 /* ElectriwiseApp.swift in Sources */,
 				C024C0592A0CDE8C00408D5A /* MultipleCheckmarkRow.swift in Sources */,
+				C01033202A12882E00677099 /* OnboardingView.swift in Sources */,
 				C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */,
 				C04B88122A03C26A0053F3C9 /* CalculatorView.swift in Sources */,
-				C024C0572A0CDB8C00408D5A /* Appliance.swift in Sources */,
+				C003B9CB2A135CFC00084371 /* ApplianceModel.xcdatamodeld in Sources */,
 				C019E9FA2A08FF6200EFA38E /* ResultView.swift in Sources */,
 				C045B2F72A04FFBE00992B32 /* ApplianceForm.swift in Sources */,
 				C0D77A372A0BAB4F003A76D2 /* AvgUsageRepeatForm.swift in Sources */,
+				C003B9D02A13774300084371 /* Appliance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +423,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C003B9C92A135CFC00084371 /* ApplianceModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C003B9CA2A135CFC00084371 /* ApplianceModel.xcdatamodel */,
+			);
+			currentVersion = C003B9CA2A135CFC00084371 /* ApplianceModel.xcdatamodel */;
+			path = ApplianceModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C04B87F82A03B9B20053F3C9 /* Project object */;
 }

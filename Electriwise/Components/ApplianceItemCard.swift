@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ApplianceItemCard: View {
     
-    @Binding var applianceName: String
-    @Binding var wattage: UInt16
-    @Binding var applianceIcon: String
+    var applianceName: String
+    var wattage: UInt16
+    var applianceIcon: String
     
     var idx: Int
     
@@ -67,12 +67,12 @@ struct ApplianceItemCard: View {
 
 struct ApplianceItemCard_Previews: PreviewProvider {
     
-    @State static var prevName: String = "Testing"
-    @State static var wattage: UInt16 = 80
-    @State static var applianceIcon: String = "stove"
+    static var prevName: String = "Testing"
+    static var wattage: UInt16 = 80
+    static var applianceIcon: String = "stove"
     static var idx: Int = 0
     
     static var previews: some View {
-        ApplianceItemCard(applianceName: $prevName, wattage: $wattage, applianceIcon: $applianceIcon, idx: idx)
+        ApplianceItemCard(applianceName: prevName, wattage: wattage, applianceIcon: applianceIcon, idx: idx)
     }
 }

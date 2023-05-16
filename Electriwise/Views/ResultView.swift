@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ResultView: View {
     
-    @Binding var appliances: [Appliance]
+    @Environment(\.managedObjectContext) var managedObjContext
+    
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name, order: .reverse)]) var applianceGet: FetchedResults<Appliances>
+    
     @Binding var electricityRate: String
     
     var body: some View {
@@ -18,20 +22,27 @@ struct ResultView: View {
                 HStack {
                     Text("Daily")
                     Spacer()
-                    Text(formatCurrencyNumber(number: appliances.map{ $0.countCostPerDay(electricityRate: UInt(electricityRate)!) }.reduce(0, +)))
+                    Text(formatCurrencyNumber(number: applianceGet.map { countCostPerDay(avgUsageUnit: $0.avg_usage_unit!, avgUsage: $0.avg_usage, wattage: $0.wattage) }.reduce(0) { result, number in
+                            return result + number
+                        }
+                    ))
                         .foregroundColor(.gray)
                 }
                 HStack {
                     Text("Monthly")
                     Spacer()
-                    Text(formatCurrencyNumber(number: appliances.map{ $0.countCostPerMonth(electricityRate: UInt(electricityRate)!) }.reduce(0, +)))
+                    Text(formatCurrencyNumber(number: applianceGet.map { countCostPerMonth(avgUsageUnit: $0.avg_usage_unit!, avgUsage: $0.avg_usage, wattage: $0.wattage, avgUsageRepeat: $0.avg_usage_repeat!) }.reduce(0) { result, number in
+                            return result + number
+                        }
+                    ))
+
                         .foregroundColor(.gray)
                 }
             }
-            ForEach(appliances, id: \.self) { appliance in
-                Section(appliance.name) {
+            ForEach(applianceGet) { appliance in
+                Section(appliance.name!) {
                     HStack {
-                        Text("\(appliance.name) Load")
+                        Text("\(appliance.name!) Load")
                         Spacer()
                         Text("\(appliance.wattage) watt")
                             .foregroundColor(.gray)
@@ -39,37 +50,32 @@ struct ResultView: View {
                     HStack {
                         Text("Avg. Daily Usage")
                         Spacer()
-                        Text("\(appliance.avgUsage) \(appliance.avgUsageUnit.rawValue)")
+                        Text("\(appliance.avg_usage) \(appliance.avg_usage_unit!)")
                             .foregroundColor(.gray)
                     }
                     HStack {
                         Text("Cost per Minutes")
                         Spacer()
-                        Text(
-                            formatCurrencyNumber(number: appliance.countCostPerMinute(electricityRate: UInt(electricityRate)!))
-                        )
+                        Text(formatCurrencyNumber(number: countCostPerMinute(wattage: appliance.wattage)))
                         .foregroundColor(.gray)
                     }
                     HStack {
                         Text("Cost per Hour")
                         Spacer()
-                        Text(formatCurrencyNumber(number: appliance.countCostPerHour(electricityRate: UInt(electricityRate)!)))
-                            .foregroundColor(.gray)
+                        Text(formatCurrencyNumber(number: countCostPerHour(wattage: appliance.wattage)))
+                        .foregroundColor(.gray)
                     }
                     HStack {
                         Text("Avg. Daily Cost")
                         Spacer()
-                        Text(formatCurrencyNumber(number: appliance.countCostPerDay(electricityRate: UInt(electricityRate)!)))
-                            .foregroundColor(.gray)
+                        Text(formatCurrencyNumber(number: countCostPerDay(avgUsageUnit: appliance.avg_usage_unit!, avgUsage: appliance.avg_usage, wattage: appliance.wattage)))
+                        .foregroundColor(.gray)
                     }
                     HStack {
                         Text("Avg. Monthly Cost")
                         Spacer()
-                        Text(formatCurrencyNumber(number: appliance.countCostPerMonth(electricityRate: UInt(electricityRate)!)))
-                            .foregroundColor(.gray)
-                    }
-                    Button("Customize this Appliance") {
-                        
+                        Text(formatCurrencyNumber(number: countCostPerMonth(avgUsageUnit: appliance.avg_usage_unit!, avgUsage: appliance.avg_usage, wattage: appliance.wattage, avgUsageRepeat: appliance.avg_usage_repeat!)))
+                        .foregroundColor(.gray)
                     }
                 }
             }
@@ -86,14 +92,32 @@ struct ResultView: View {
         
         return formatter.string(from: NSNumber(value: number))!
     }
+    
+    func countCostPerHour(wattage: Int16) -> Float {
+        let result: Float = Float(wattage) / 1000 * Float(electricityRate)!
+        return result
+    }
+    
+    func countCostPerMinute(wattage: Int16) -> Float {
+        return countCostPerHour(wattage: wattage) / 60
+    }
+    
+    func countCostPerDay(avgUsageUnit: String, avgUsage: Int16, wattage: Int16) -> Float {
+        let usageInDay: Float = avgUsageUnit == "Minutes / Day" ? Float(avgUsage) / Float(60) : Float(avgUsage)
+        return countCostPerHour(wattage: wattage) * usageInDay
+    }
+    
+    func countCostPerMonth(avgUsageUnit: String, avgUsage: Int16, wattage: Int16, avgUsageRepeat: String) -> Float {
+        let usageInMonth: Float = Float(avgUsageRepeat.split(separator: ",").count) * Float(4)
+        return countCostPerDay(avgUsageUnit: avgUsageUnit, avgUsage: avgUsage, wattage: wattage) * usageInMonth
+    }
 }
 
 struct ResultView_Previews: PreviewProvider {
     
-    @State static private var appliances: [Appliance] = []
     @State static private var electricityRate: String = ""
     
     static var previews: some View {
-        ResultView(appliances: $appliances, electricityRate: $electricityRate)
+        ResultView(electricityRate: $electricityRate)
     }
 }

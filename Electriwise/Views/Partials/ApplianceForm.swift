@@ -25,6 +25,9 @@ enum AvgUsageType: String, CaseIterable, Identifiable {
 struct ApplianceForm: SwiftUI.View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var managedObjContext
+    
+    @AppStorage("StoredAppliancesList") var storedAppliances: String = ""
     
     @State private var name: String = ""
     @State private var wattage: String = ""
@@ -64,7 +67,6 @@ struct ApplianceForm: SwiftUI.View {
                             }
                         Text("Watt")
                     }
-//                    Toggle("Inverter Device", isOn: $isInverter)
                 }
                 Section(header: Text("Usage")) {
                     HStack {
@@ -109,6 +111,7 @@ struct ApplianceForm: SwiftUI.View {
                     Button("Save") {
                         if isFormValid() {
                             let appliance: Appliance = Appliance(name: name, wattage: UInt16(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat)
+                            persistData(appliance)
                             appliancesList.append(appliance)
                             self.presentationMode.wrappedValue.dismiss()
                         } else {
@@ -133,6 +136,10 @@ struct ApplianceForm: SwiftUI.View {
     }
     
     func isFormValid() -> Bool { !name.isEmpty && !wattage.isEmpty && !averageUsage.isEmpty }
+    
+    func persistData(_ appliance: Appliance) -> Void {
+        DataController().addAppliance(appliance, context: managedObjContext)
+    }
 }
 
 struct ApplianceForm_Previews: PreviewProvider {
