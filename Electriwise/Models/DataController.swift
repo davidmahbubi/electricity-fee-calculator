@@ -36,7 +36,7 @@ class DataController: ObservableObject {
         appliance.wattage = Int16(applianceObj.wattage)
         appliance.icon_name = applianceObj.iconName
         appliance.avg_usage = Int16(applianceObj.avgUsage)
-        appliance.avg_usage_unit = applianceObj.avgUsageUnit.rawValue
+        appliance.avg_usage_unit = applianceObj.avgUsageUnit
         appliance.avg_usage_repeat = applianceObj.avgUsageRepeat.map { avgUsageRepeat in
             avgUsageRepeat.rawValue
         }.joined(separator: ", ")

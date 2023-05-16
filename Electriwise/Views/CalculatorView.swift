@@ -14,8 +14,9 @@ struct CalculatorView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name, order: .reverse)]) var applianceGet: FetchedResults<Appliances>
     @Environment(\.managedObjectContext) var managedObjectContext
     
+    @AppStorage("storedElectricityRate") var electricityRate: String = ""
+    
     @State var appliances: [Appliance] = []
-    @State private var electricityRate: String = ""
     @State var showFormModal: Bool = false
     @State var showAlert: Bool = false
     @State var showResult: Int? = nil
@@ -133,13 +134,13 @@ struct Calculator_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView(appliances: [
             Appliance(
-                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday]
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday]
             ),
             Appliance(
-                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday]
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday]
             ),
             Appliance(
-                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: .hours_day, avgUsageRepeat: [.sunday, .monday]
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday]
             ),
         ])
     }

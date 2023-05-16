@@ -10,9 +10,8 @@ import SwiftUI
 @main
 struct ElectriwiseApp: App {
     
-    @AppStorage("isOnboardingSkipped") var isOnboardingSkipped: Bool = false
-    
     @StateObject private var dataController = DataController()
+    @AppStorage("isOnboardingSkipped") var isOnboardingSkipped: Bool = false
     
     var body: some Scene {
         WindowGroup {

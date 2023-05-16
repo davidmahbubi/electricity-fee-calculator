@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		C003B9CB2A135CFC00084371 /* ApplianceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C003B9C92A135CFC00084371 /* ApplianceModel.xcdatamodeld */; };
 		C003B9CE2A135D7900084371 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003B9CD2A135D7900084371 /* DataController.swift */; };
-		C003B9D02A13774300084371 /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003B9CF2A13774300084371 /* Appliance.swift */; };
 		C003B9D22A13791200084371 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C003B9D12A13791200084371 /* README.md */; };
+		C003B9D42A1379F500084371 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003B9D32A1379F500084371 /* GlobalConstants.swift */; };
+		C003B9D82A13868200084371 /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003B9D72A13868200084371 /* Appliance.swift */; };
 		C01033202A12882E00677099 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C010331F2A12882D00677099 /* OnboardingView.swift */; };
 		C019E9FA2A08FF6200EFA38E /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C019E9F92A08FF6200EFA38E /* ResultView.swift */; };
 		C024C0592A0CDE8C00408D5A /* MultipleCheckmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */; };
@@ -27,8 +28,9 @@
 /* Begin PBXFileReference section */
 		C003B9CA2A135CFC00084371 /* ApplianceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApplianceModel.xcdatamodel; sourceTree = "<group>"; };
 		C003B9CD2A135D7900084371 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		C003B9CF2A13774300084371 /* Appliance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Appliance.swift; path = ../../../../../.Trash/Appliance.swift; sourceTree = "<group>"; };
 		C003B9D12A13791200084371 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C003B9D32A1379F500084371 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		C003B9D72A13868200084371 /* Appliance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Appliance.swift; path = ../../../../../Downloads/Appliance.swift; sourceTree = "<group>"; };
 		C010331F2A12882D00677099 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C019E9F92A08FF6200EFA38E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCheckmarkRow.swift; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 		C024C0552A0CDB7700408D5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C003B9CF2A13774300084371 /* Appliance.swift */,
+				C003B9D72A13868200084371 /* Appliance.swift */,
 				C003B9C92A135CFC00084371 /* ApplianceModel.xcdatamodeld */,
 				C003B9CD2A135D7900084371 /* DataController.swift */,
 			);
@@ -120,6 +122,7 @@
 				C04B88032A03B9B20053F3C9 /* ElectriwiseApp.swift */,
 				C04B88072A03B9B20053F3C9 /* Assets.xcassets */,
 				C04B88092A03B9B20053F3C9 /* Preview Content */,
+				C003B9D32A1379F500084371 /* GlobalConstants.swift */,
 			);
 			path = Electriwise;
 			sourceTree = "<group>";
@@ -211,14 +214,15 @@
 				C003B9CE2A135D7900084371 /* DataController.swift in Sources */,
 				C04B88042A03B9B20053F3C9 /* ElectriwiseApp.swift in Sources */,
 				C024C0592A0CDE8C00408D5A /* MultipleCheckmarkRow.swift in Sources */,
+				C003B9D82A13868200084371 /* Appliance.swift in Sources */,
 				C01033202A12882E00677099 /* OnboardingView.swift in Sources */,
+				C003B9D42A1379F500084371 /* GlobalConstants.swift in Sources */,
 				C03D5E942A06746500947F0B /* ApplianceItemCard.swift in Sources */,
 				C04B88122A03C26A0053F3C9 /* CalculatorView.swift in Sources */,
 				C003B9CB2A135CFC00084371 /* ApplianceModel.xcdatamodeld in Sources */,
 				C019E9FA2A08FF6200EFA38E /* ResultView.swift in Sources */,
 				C045B2F72A04FFBE00992B32 /* ApplianceForm.swift in Sources */,
 				C0D77A372A0BAB4F003A76D2 /* AvgUsageRepeatForm.swift in Sources */,
-				C003B9D02A13774300084371 /* Appliance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

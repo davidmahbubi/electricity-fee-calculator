@@ -8,19 +8,14 @@
 import SwiftUI
 import Combine
 
-enum InputMode {
-    case WATTAGE
-    case VOLTS_AMP
-}
-
-enum AvgUsageType: String, CaseIterable, Identifiable {
-    case minutes_day = "Minutes / Day"
-    case hours_day = "Hours / Day"
-    
-    var id: RawValue {
-        self.rawValue
-    }
-}
+//enum AvgUsageTypes: String, CaseIterable, Identifiable {
+//    case minutes_day = "Minutes / Day"
+//    case hours_day = "Hours / Day"
+//
+//    var id: RawValue {
+//        self.rawValue
+//    }
+//}
 
 struct ApplianceForm: SwiftUI.View {
     
@@ -32,7 +27,7 @@ struct ApplianceForm: SwiftUI.View {
     @State private var name: String = ""
     @State private var wattage: String = ""
     @State private var averageUsage: String = ""
-    @State private var selectedAverageUsageUnit: AvgUsageType = .hours_day
+    @State private var selectedAverageUsageUnit: String = AvgUsageTypes[0]
     @State private var selectedIconIndex: Int = 0
     @State private var isInverter: Bool = false
     @State private var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = []
@@ -79,8 +74,8 @@ struct ApplianceForm: SwiftUI.View {
                                 }
                             }
                         Picker("", selection: $selectedAverageUsageUnit) {
-                            ForEach(AvgUsageType.allCases) { list in
-                                Text(list.rawValue).tag(list)
+                            ForEach(AvgUsageTypes, id: \.self) { avgUsageType in
+                                Text(avgUsageType)
                             }
                         }
                         .pickerStyle(MenuPickerStyle())
