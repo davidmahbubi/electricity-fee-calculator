@@ -11,6 +11,9 @@ import CoreData
 struct ResultView: View {
     
     @Environment(\.managedObjectContext) var managedObjContext
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State private var isShowEmptyAlert: Bool = false
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name, order: .reverse)]) var applianceGet: FetchedResults<Appliances>
     
@@ -81,6 +84,15 @@ struct ResultView: View {
             }
         }
         .navigationTitle("Calculation Result")
+        .onAppear {
+            if applianceGet.isEmpty {
+                isShowEmptyAlert = true
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        }
+        .alert(isPresented: $isShowEmptyAlert) {
+            Alert(title: Text("No Appliances"), message: Text("Add appliances first to calculate your electricity"))
+        }
     }
     
     func formatCurrencyNumber(number: Float) -> String {

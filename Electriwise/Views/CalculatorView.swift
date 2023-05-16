@@ -73,11 +73,10 @@ struct CalculatorView: View {
                     LazyVGrid(columns: rowsItem, spacing: 8) {
                         ForEach(applianceGet) { appliance in
                             ApplianceItemCard(
-                                applianceName: appliance.name!,
+                                applianceName: appliance.name ?? "",
                                 wattage: UInt16(appliance.wattage),
-                                applianceIcon: appliance.icon_name!,
-                                idx: 0,
-                                onDelete: { idx in
+                                applianceIcon: appliance.icon_name ?? "stove",
+                                onDelete: {
                                     managedObjectContext.delete(appliance)
                                     DataController().save(context: managedObjectContext)
                                 }

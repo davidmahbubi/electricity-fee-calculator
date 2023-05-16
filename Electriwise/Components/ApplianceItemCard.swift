@@ -13,9 +13,7 @@ struct ApplianceItemCard: View {
     var wattage: UInt16
     var applianceIcon: String
     
-    var idx: Int
-    
-    var onDelete: ((_ idx: Int) -> Void)?
+    var onDelete: (() -> Void)?
     
     var body: some View {
         ZStack {
@@ -38,7 +36,7 @@ struct ApplianceItemCard: View {
                     .font(.title3)
                     .padding(.bottom, 0.1)
                     .padding(.top, 20)
-                Text("\(wattage)watt")
+                Text("\(wattage) watt")
                     .foregroundColor(.white)
             }
             .padding()
@@ -46,14 +44,8 @@ struct ApplianceItemCard: View {
         }
         .contextMenu(ContextMenu(menuItems: {
             Button(action: {
-                
-            }) {
-                Text("Edit")
-                Image(systemName: "pencil")
-            }
-            Button(action: {
                 if (onDelete != nil) {
-                    onDelete!(self.idx)
+                    onDelete!()
                 }
             }) {
                 Text("Delete")
@@ -73,6 +65,6 @@ struct ApplianceItemCard_Previews: PreviewProvider {
     static var idx: Int = 0
     
     static var previews: some View {
-        ApplianceItemCard(applianceName: prevName, wattage: wattage, applianceIcon: applianceIcon, idx: idx)
+        ApplianceItemCard(applianceName: prevName, wattage: wattage, applianceIcon: applianceIcon)
     }
 }

@@ -30,7 +30,7 @@ struct ApplianceForm: SwiftUI.View {
     @State private var selectedAverageUsageUnit: String = AvgUsageTypes[0]
     @State private var selectedIconIndex: Int = 0
     @State private var isInverter: Bool = false
-    @State private var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = []
+    @State private var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = [.sunday, .monday, .tuesday, .wednesday, .thursday, .friday, .saturday]
     @State private var isInvalidAlertPresented: Bool = false
     
     @Binding var appliancesList: [Appliance]
