@@ -34,6 +34,7 @@
 		C010331F2A12882D00677099 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C019E9F92A08FF6200EFA38E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		C024C0582A0CDE8C00408D5A /* MultipleCheckmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCheckmarkRow.swift; sourceTree = "<group>"; };
+		C03CA3322A14960900193F08 /* Privacy Policy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Privacy Policy.md"; sourceTree = "<group>"; };
 		C03D5E932A06746500947F0B /* ApplianceItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceItemCard.swift; sourceTree = "<group>"; };
 		C045B2F62A04FFBE00992B32 /* ApplianceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceForm.swift; sourceTree = "<group>"; };
 		C04B88002A03B9B20053F3C9 /* Electriwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Electriwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +100,7 @@
 		C04B87F72A03B9B20053F3C9 = {
 			isa = PBXGroup;
 			children = (
+				C03CA3322A14960900193F08 /* Privacy Policy.md */,
 				C003B9D12A13791200084371 /* README.md */,
 				C04B88022A03B9B20053F3C9 /* Electriwise */,
 				C04B88012A03B9B20053F3C9 /* Products */,
