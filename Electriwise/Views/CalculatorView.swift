@@ -39,7 +39,6 @@ struct CalculatorView: View {
                 HStack {
                     TextField("Input electriciy rate", text: $electricityRate)
                         .padding()
-                        .foregroundColor(.white)
                         .accentColor(.white)
                         .onReceive(Just(electricityRate)) { newValue in
                             let filtered = newValue.filter { "0123456789".contains($0) }
