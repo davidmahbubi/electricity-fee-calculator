@@ -12,6 +12,7 @@ struct ApplianceItemCard: View {
     var applianceName: String
     var wattage: UInt16
     var applianceIcon: String
+    var qty: UInt16
     
     var onDelete: (() -> Void)?
     
@@ -36,7 +37,7 @@ struct ApplianceItemCard: View {
                     .font(.title3)
                     .padding(.bottom, 0.1)
                     .padding(.top, 20)
-                Text("\(wattage) watt")
+                Text("\(wattage) watt x \(qty)")
                     .foregroundColor(.white)
             }
             .padding()
@@ -65,6 +66,6 @@ struct ApplianceItemCard_Previews: PreviewProvider {
     static var idx: Int = 0
     
     static var previews: some View {
-        ApplianceItemCard(applianceName: prevName, wattage: wattage, applianceIcon: applianceIcon)
+        ApplianceItemCard(applianceName: prevName, wattage: wattage, applianceIcon: applianceIcon, qty: 10)
     }
 }

@@ -75,6 +75,7 @@ struct CalculatorView: View {
                                 applianceName: appliance.name ?? "",
                                 wattage: UInt16(appliance.wattage),
                                 applianceIcon: appliance.icon_name ?? "stove",
+                                qty: UInt16(appliance.qty),
                                 onDelete: {
                                     managedObjectContext.delete(appliance)
                                     DataController().save(context: managedObjectContext)
@@ -132,13 +133,13 @@ struct Calculator_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView(appliances: [
             Appliance(
-                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday]
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday], qty: 1
             ),
             Appliance(
-                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday]
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday], qty: 1
             ),
             Appliance(
-                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday]
+                name: "Testing", wattage: 20, avgUsage: 20, iconName: "stove", avgUsageUnit: AvgUsageTypes[0], avgUsageRepeat: [.sunday, .monday], qty: 1
             ),
         ])
     }

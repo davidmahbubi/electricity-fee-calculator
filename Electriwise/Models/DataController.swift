@@ -39,6 +39,7 @@ class DataController: ObservableObject {
         appliance.avg_usage_repeat = applianceObj.avgUsageRepeat.map { avgUsageRepeat in
             avgUsageRepeat.rawValue
         }.joined(separator: ", ")
+        appliance.qty = Int16(applianceObj.qty)
         save(context: context)
     }
 }

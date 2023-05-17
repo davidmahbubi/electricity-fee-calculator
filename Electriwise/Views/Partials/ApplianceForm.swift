@@ -22,6 +22,7 @@ struct ApplianceForm: SwiftUI.View {
     @State private var selectedIconIndex: Int = 0
     @State private var isInverter: Bool = false
     @State private var isInvalidAlertPresented: Bool = false
+    @State private var quantity: UInt16 = 1
     
     @State private var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = [
         .sunday, .monday, .tuesday, .wednesday, .thursday, .friday, .saturday
@@ -79,7 +80,13 @@ struct ApplianceForm: SwiftUI.View {
                     NavigationLink(destination: RepeatView(selectedItems: $selectedAvgUsageRepeat)) {
                         Text("Repeat Every")
                     }
-                }
+                    Stepper(value: $quantity, in: 1...100) {
+                        HStack {
+                            Text("Quantity")
+                            Spacer()
+                            Text("\(quantity)")
+                        }
+                    }                }
                 Section(header: Text("Icon")) {
                     ScrollView {
                         LazyVGrid(columns: iconColumnsLayout) {
@@ -101,7 +108,7 @@ struct ApplianceForm: SwiftUI.View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         if isFormValid() {
-                            let appliance: Appliance = Appliance(name: name, wattage: UInt16(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat)
+                            let appliance: Appliance = Appliance(name: name, wattage: UInt16(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat, qty: quantity)
                             persistData(appliance)
                             appliancesList.append(appliance)
                             self.presentationMode.wrappedValue.dismiss()

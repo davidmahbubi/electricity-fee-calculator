@@ -43,11 +43,11 @@ struct ResultView: View {
                 }
             }
             ForEach(applianceGet) { appliance in
-                Section(appliance.name!) {
+                Section("\(appliance.name!) (\(appliance.qty) item\(appliance.qty > 1 ? "s" : ""))") {
                     HStack {
                         Text("\(appliance.name!) Load")
                         Spacer()
-                        Text("\(appliance.wattage) watt")
+                        Text("\(appliance.wattage * appliance.qty) watt")
                             .foregroundColor(.gray)
                     }
                     HStack {
@@ -59,25 +59,25 @@ struct ResultView: View {
                     HStack {
                         Text("Cost per Minutes")
                         Spacer()
-                        Text(formatCurrencyNumber(number: countCostPerMinute(wattage: appliance.wattage)))
+                        Text(formatCurrencyNumber(number: countCostPerMinute(wattage: appliance.wattage) * Float(appliance.qty)))
                         .foregroundColor(.gray)
                     }
                     HStack {
                         Text("Cost per Hour")
                         Spacer()
-                        Text(formatCurrencyNumber(number: countCostPerHour(wattage: appliance.wattage)))
+                        Text(formatCurrencyNumber(number: countCostPerHour(wattage: appliance.wattage) * Float(appliance.qty)))
                         .foregroundColor(.gray)
                     }
                     HStack {
                         Text("Avg. Daily Cost")
                         Spacer()
-                        Text(formatCurrencyNumber(number: countCostPerDay(avgUsageUnit: appliance.avg_usage_unit!, avgUsage: appliance.avg_usage, wattage: appliance.wattage)))
+                        Text(formatCurrencyNumber(number: countCostPerDay(avgUsageUnit: appliance.avg_usage_unit!, avgUsage: appliance.avg_usage, wattage: appliance.wattage) * Float(appliance.qty)))
                         .foregroundColor(.gray)
                     }
                     HStack {
                         Text("Avg. Monthly Cost")
                         Spacer()
-                        Text(formatCurrencyNumber(number: countCostPerMonth(avgUsageUnit: appliance.avg_usage_unit!, avgUsage: appliance.avg_usage, wattage: appliance.wattage, avgUsageRepeat: appliance.avg_usage_repeat!)))
+                        Text(formatCurrencyNumber(number: countCostPerMonth(avgUsageUnit: appliance.avg_usage_unit!, avgUsage: appliance.avg_usage, wattage: appliance.wattage, avgUsageRepeat: appliance.avg_usage_repeat!) * Float(appliance.qty)))
                         .foregroundColor(.gray)
                     }
                 }
