@@ -120,9 +120,6 @@ struct ApplianceForm: SwiftUI.View {
                     }
                 }
             }
-            .onAppear {
-                print("Hello world")
-            }
             .alert(isPresented: $isInvalidAlertPresented) {
                 Alert(title: Text("Form Incomplete"), message: Text("All fields should be filled!"))
             }
