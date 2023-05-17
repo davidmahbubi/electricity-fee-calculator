@@ -11,7 +11,7 @@ import CoreData
 
 struct CalculatorView: View {
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name, order: .reverse)]) var applianceGet: FetchedResults<Appliances>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name, order: .forward)]) var applianceGet: FetchedResults<Appliances>
     @Environment(\.managedObjectContext) var managedObjectContext
     
     @AppStorage("storedElectricityRate") var electricityRate: String = ""

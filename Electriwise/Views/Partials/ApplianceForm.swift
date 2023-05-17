@@ -8,15 +8,6 @@
 import SwiftUI
 import Combine
 
-//enum AvgUsageTypes: String, CaseIterable, Identifiable {
-//    case minutes_day = "Minutes / Day"
-//    case hours_day = "Hours / Day"
-//
-//    var id: RawValue {
-//        self.rawValue
-//    }
-//}
-
 struct ApplianceForm: SwiftUI.View {
     
     @Environment(\.presentationMode) var presentationMode
@@ -30,8 +21,11 @@ struct ApplianceForm: SwiftUI.View {
     @State private var selectedAverageUsageUnit: String = AvgUsageTypes[0]
     @State private var selectedIconIndex: Int = 0
     @State private var isInverter: Bool = false
-    @State private var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = [.sunday, .monday, .tuesday, .wednesday, .thursday, .friday, .saturday]
     @State private var isInvalidAlertPresented: Bool = false
+    
+    @State private var selectedAvgUsageRepeat: Set<AvgUsageRepeat> = [
+        .sunday, .monday, .tuesday, .wednesday, .thursday, .friday, .saturday
+    ]
     
     @Binding var appliancesList: [Appliance]
     
@@ -42,7 +36,9 @@ struct ApplianceForm: SwiftUI.View {
     ]
     
     let defaults = UserDefaults.standard
-    let availableIcons = ["pc", "air.conditioner.horizontal", "stove", "lamp.floor", "washer", "gamecontroller", "tv", "hifispeaker" , "cup.and.saucer", "bolt.car" , "iphone.gen1", "fan.floor"]
+    let availableIcons = [
+        "pc", "air.conditioner.horizontal", "stove", "lamp.floor", "washer", "gamecontroller", "tv", "hifispeaker" , "cup.and.saucer", "bolt.car" , "iphone.gen1", "fan.floor"
+    ]
     
     var body: some SwiftUI.View {
         NavigationView {
@@ -124,7 +120,6 @@ struct ApplianceForm: SwiftUI.View {
                 Alert(title: Text("Form Incomplete"), message: Text("All fields should be filled!"))
             }
         }
-        .navigationTitle("Hello world")
     }
     
     func isFormValid() -> Bool { !name.isEmpty && !wattage.isEmpty && !averageUsage.isEmpty }
