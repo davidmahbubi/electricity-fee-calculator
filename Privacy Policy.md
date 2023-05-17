@@ -12,9 +12,6 @@ Data Security:
 
 Data Protection: While ElectriWise does not collect any personal information, we still prioritize the security and integrity of the limited data we handle. We employ industry-standard security measures to protect the app and its infrastructure from unauthorized access, data breaches, and any potential vulnerabilities.
 Secure Transmission: Any information exchanged between the app and your device is securely transmitted using encryption protocols.
-Children's Privacy:
-
-ElectriWise is not designed for or targeted at children under the age of 13. We do not knowingly collect any personal information from children. If we become aware that a child has provided us with personal information, we will promptly delete it from our records.
 
 Changes to the Privacy Policy:
 
