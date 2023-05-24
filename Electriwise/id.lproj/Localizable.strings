@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  Electriwise
+
+  Created by David Mahbubi on 24/05/23.
+  
+*/
+
+"onboardingHeadline" = "Lebih Bijak Dalam Mengontrol Pengeluaran Listrik Anda";
+"getStarted" = "Mulai";
+"appliances" = "Perabotan";
+"inputElectricityRatePlaceholder" = "Masukan Harga Listrik";
+"calculateNow" = "Hitung Sekarang";
+"add" = "Tambah";
+"general" = "Informasi Umum";
+"name" = "Nama";
+"electricalInformation" = "Informasi Kelistrikan";
+"usage" = "Penggunaan";
+"averageUsage" = "Rata - Rata Penggunaan";
+"repeatEvery" = "Penggunaan Harian";
+"quantity" = "Kuantitas";
+"icon" = "Ikon";
+"save" = "Simpan";
+"cancel" = "Batal";
+"calculationResult" = "Hasil Perhitungan";
+"globalAverageCost" = "Rata - Rata Biaya";
+"daily" = "Harian";
+"monthly" = "Bulanan";
+"load" = "Beban";
+"avgDailyUsage" = "RR. Penggunaan Harian";
+"costPerMinutes" = "Biaya per Menit";
+"costPerHour" = "Biaya per Jam";
+"avgDailyCost" = "RR. Biaya Harian";
+"avgMonthlyCost" = "RR. Biaya Bulanan";
+"noAppliances" = "Tidak Ada Perabotan";
+"noAppliancesAlertMessage" = "Tambah perabotan terlebih dahulu untuk mulai menghitung biayanya";

@@ -44,10 +44,10 @@ struct ApplianceForm: SwiftUI.View {
     var body: some SwiftUI.View {
         NavigationView {
             Form {
-                Section(header: Text("General")) {
-                    TextField("Name", text: $name)
+                Section(header: Text("general")) {
+                    TextField("name", text: $name)
                 }
-                Section(header: Text("Electrical Information")) {
+                Section(header: Text("electricalInformation")) {
                     HStack {
                         TextField("Wattage", text: $wattage)
                             .keyboardType(.numberPad)
@@ -60,9 +60,9 @@ struct ApplianceForm: SwiftUI.View {
                         Text("Watt")
                     }
                 }
-                Section(header: Text("Usage")) {
+                Section(header: Text("usage")) {
                     HStack {
-                        TextField("Average Usage", text: $averageUsage)
+                        TextField("averageUsage", text: $averageUsage)
                             .keyboardType(.numberPad)
                             .onReceive(Just(averageUsage)) { newValue in
                                 let filtered = newValue.filter { "0123456789".contains($0) }
@@ -78,16 +78,16 @@ struct ApplianceForm: SwiftUI.View {
                         .pickerStyle(MenuPickerStyle())
                     }
                     NavigationLink(destination: RepeatView(selectedItems: $selectedAvgUsageRepeat)) {
-                        Text("Repeat Every")
+                        Text("repeatEvery")
                     }
                     Stepper(value: $quantity, in: 1...100) {
                         HStack {
-                            Text("Quantity")
+                            Text("quantity")
                             Spacer()
                             Text("\(quantity)")
                         }
                     }                }
-                Section(header: Text("Icon")) {
+                Section(header: Text("icon")) {
                     ScrollView {
                         LazyVGrid(columns: iconColumnsLayout) {
                             ForEach(0..<availableIcons.count, id: \.self) { idx in
@@ -106,7 +106,7 @@ struct ApplianceForm: SwiftUI.View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Save") {
+                    Button("save") {
                         if isFormValid() {
                             let appliance: Appliance = Appliance(name: name, wattage: UInt16(wattage)!, avgUsage: UInt8(averageUsage)!, iconName: availableIcons[selectedIconIndex], avgUsageUnit: selectedAverageUsageUnit, avgUsageRepeat: selectedAvgUsageRepeat, qty: quantity)
                             persistData(appliance)
@@ -118,7 +118,7 @@ struct ApplianceForm: SwiftUI.View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") {
+                    Button("cancel") {
                         self.presentationMode.wrappedValue.dismiss()
                     }
                 }

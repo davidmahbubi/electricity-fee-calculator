@@ -21,9 +21,9 @@ struct ResultView: View {
     
     var body: some View {
         List {
-            Section ("Global average cost") {
+            Section ("globalAverageCost") {
                 HStack {
-                    Text("Daily")
+                    Text("daily")
                     Spacer()
                     Text(formatCurrencyNumber(number: applianceGet.map { countCostPerDay(avgUsageUnit: $0.avg_usage_unit!, avgUsage: $0.avg_usage, wattage: $0.wattage) }.reduce(0) { result, number in
                             return result + number
@@ -32,7 +32,7 @@ struct ResultView: View {
                         .foregroundColor(.gray)
                 }
                 HStack {
-                    Text("Monthly")
+                    Text("monthly")
                     Spacer()
                     Text(formatCurrencyNumber(number: applianceGet.map { countCostPerMonth(avgUsageUnit: $0.avg_usage_unit!, avgUsage: $0.avg_usage, wattage: $0.wattage, avgUsageRepeat: $0.avg_usage_repeat!) }.reduce(0) { result, number in
                             return result + number
@@ -45,37 +45,37 @@ struct ResultView: View {
             ForEach(applianceGet) { appliance in
                 Section("\(appliance.name!) (\(appliance.qty) item\(appliance.qty > 1 ? "s" : ""))") {
                     HStack {
-                        Text("\(appliance.name!) Load")
+                        Text("\(appliance.name!) load")
                         Spacer()
                         Text("\(appliance.wattage * appliance.qty) watt")
                             .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("Avg. Daily Usage")
+                        Text("avgDailyUsage")
                         Spacer()
                         Text("\(appliance.avg_usage) \(appliance.avg_usage_unit!)")
                             .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("Cost per Minutes")
+                        Text("costPerMinutes")
                         Spacer()
                         Text(formatCurrencyNumber(number: countCostPerMinute(wattage: appliance.wattage) * Float(appliance.qty)))
                         .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("Cost per Hour")
+                        Text("costPerHour")
                         Spacer()
                         Text(formatCurrencyNumber(number: countCostPerHour(wattage: appliance.wattage) * Float(appliance.qty)))
                         .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("Avg. Daily Cost")
+                        Text("avgDailyCost")
                         Spacer()
                         Text(formatCurrencyNumber(number: countCostPerDay(avgUsageUnit: appliance.avg_usage_unit!, avgUsage: appliance.avg_usage, wattage: appliance.wattage) * Float(appliance.qty)))
                         .foregroundColor(.gray)
                     }
                     HStack {
-                        Text("Avg. Monthly Cost")
+                        Text("avgMonthlyCost")
                         Spacer()
                         Text(formatCurrencyNumber(number: countCostPerMonth(avgUsageUnit: appliance.avg_usage_unit!, avgUsage: appliance.avg_usage, wattage: appliance.wattage, avgUsageRepeat: appliance.avg_usage_repeat!) * Float(appliance.qty)))
                         .foregroundColor(.gray)
@@ -83,7 +83,7 @@ struct ResultView: View {
                 }
             }
         }
-        .navigationTitle("Calculation Result")
+        .navigationTitle("calculationResult")
         .onAppear {
             if applianceGet.isEmpty {
                 isShowEmptyAlert = true
@@ -91,7 +91,7 @@ struct ResultView: View {
             }
         }
         .alert(isPresented: $isShowEmptyAlert) {
-            Alert(title: Text("No Appliances"), message: Text("Add appliances first to calculate your electricity"))
+            Alert(title: Text("noAppliances"), message: Text("noAppliancesAlertMessage"))
         }
     }
     

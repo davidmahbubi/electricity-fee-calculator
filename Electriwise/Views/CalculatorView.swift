@@ -37,7 +37,7 @@ struct CalculatorView: View {
                     .stroke(.blue, lineWidth: 3.5)
                     .frame(height: 70)
                 HStack {
-                    TextField("Input electriciy rate", text: $electricityRate)
+                    TextField("inputElectricityRatePlaceholder", text: $electricityRate)
                         .padding()
                         .accentColor(.white)
                         .onReceive(Just(electricityRate)) { newValue in
@@ -91,7 +91,7 @@ struct CalculatorView: View {
             NavigationLink {
                 ResultView(electricityRate: $electricityRate)
             } label: {
-                Text("Calculate Now")
+                Text("calculateNow")
                     .frame(maxWidth: .infinity)
                     .frame(height: 70)
                     .foregroundColor(.white)
@@ -104,9 +104,9 @@ struct CalculatorView: View {
             }
             .disabled(electricityRate == "" ? true : false)
         }
-        .navigationTitle("Appliances")
+        .navigationTitle("appliances")
         .toolbar {
-            Button("Add") {
+            Button("add") {
                 showFormModal = true
             }
         }

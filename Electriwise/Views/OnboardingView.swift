@@ -23,11 +23,11 @@ struct OnboardingView: View {
                 .scaledToFit()
                 .frame(height: 200)
                 .padding(.bottom, 20)
-            Text("Empowering You to Track and Control Your Electric Bill")
+            Text("onboardingHeadline")
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: 300)
             Spacer()
-            Button("Get Started") {
+            Button("getStarted") {
                 isOnboardingSkipped = true
             }
                 .frame(width: 300, height: 70)

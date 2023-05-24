@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  Electriwise
+
+  Created by David Mahbubi on 24/05/23.
+  
+*/
+
+"onboardingHeadline" = "Empowering You to Track and Control Your Electric Bill";
+"getStarted" = "Get Started";
+"appliances" = "Appliances";
+"inputElectricityRatePlaceholder" = "Input electricity rate";
+"calculateNow" = "Calculate Now";
+"add" = "Add";
+"general" = "General";
+"name" = "Name";
+"electricalInformation" = "Electrical Information";
+"usage" = "Usage";
+"averageUsage" = "Average Usage";
+"repeatEvery" = "Repeat Every";
+"quantity" = "Quantity";
+"icon" = "Icon";
+"save" = "Save";
+"cancel" = "Cancel";
+"calculationResult" = "Calculation Result";
+"globalAverageCost" = "Global Average Cost";
+"daily" = "Daily";
+"monthly" = "Monthly";
+"load" = "Load";
+"avgDailyUsage" = "Avg. Daily Usage";
+"costPerMinutes" = "Cost per Minutes";
+"costPerHour" = "Cost per Hour";
+"avgDailyCost" = "Avg. Daily Cost";
+"avgMonthlyCost" = "Avg. Monhtly Cost";
+"noAppliances" = "No Appliances";
+"noAppliancesAlertMessage" = "Add appliances first to calculate your electricity";
