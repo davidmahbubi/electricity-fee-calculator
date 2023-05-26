@@ -1,0 +1,144 @@
+2023-05-24 05:14:12 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x2cb75a910; archive(resolved)="<IDEArchive: 0x6000168318c0>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	Chain (14, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x2cb75a910; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0x2dc31c680; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2c70ae120; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2cb4b0fc0; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2c6a6ced0; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2c2eaa390; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x11363ca80; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x1136ff900; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2dcc36480; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="<IDEProvisioningDisambiguatableBasicTeam: 0x600001541000; teamID='AHLML969C8', teamName='David Mahbubi', teamType='Individual', username='ulrichdavid0370@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0x2dccaa280; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="(null)">
+	<IDEDistributionContext: 0x10d25cf20; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="(null)">
+	<IDEDistributionContext: 0x2dc8301c0; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="(null)">
+	<IDEDistributionContext: 0x2c69faa80; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0x600008f0c990>", team="(null)">
+	<IDEDistributionContext: 0x2d8d3ebe0; archive = "<IDEArchive: 0x6000168318c0>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x2cb75a910>
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionCreateDestRootStep
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionCopyItemStep
+2023-05-24 05:14:12 +0000  Running /usr/bin/ditto '-V' '/Users/davidmahbubi/Library/Developer/Xcode/Archives/2023-05-24/Electriwise 24-05-23 12.13.xcarchive/Products/Applications/Electriwise.app' '/var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root/Payload/Electriwise.app'
+2023-05-24 05:14:12 +0000  >>> Copying /Users/davidmahbubi/Library/Developer/Xcode/Archives/2023-05-24/Electriwise 24-05-23 12.13.xcarchive/Products/Applications/Electriwise.app 
+2023-05-24 05:14:12 +0000  copying file ./_CodeSignature/CodeResources ... 
+2023-05-24 05:14:12 +0000  4203 bytes for ./_CodeSignature/CodeResources
+2023-05-24 05:14:12 +0000  copying file ./Electriwise ... 
+2023-05-24 05:14:12 +0000  269584 bytes for ./Electriwise
+2023-05-24 05:14:12 +0000  copying file ./en.lproj/Localizable.strings ... 
+2023-05-24 05:14:12 +0000  1008 bytes for ./en.lproj/Localizable.strings
+2023-05-24 05:14:12 +0000  copying file ./AppIcon60x60@2x.png ... 
+2023-05-24 05:14:12 +0000  5064 bytes for ./AppIcon60x60@2x.png
+2023-05-24 05:14:12 +0000  copying file ./ApplianceModel.momd/VersionInfo.plist ... 
+2023-05-24 05:14:12 +0000  154 bytes for ./ApplianceModel.momd/VersionInfo.plist
+2023-05-24 05:14:12 +0000  copying file ./ApplianceModel.momd/ApplianceModel.mom ... 
+2023-05-24 05:14:12 +0000  1910 bytes for ./ApplianceModel.momd/ApplianceModel.mom
+2023-05-24 05:14:12 +0000  copying file ./README.md ... 
+2023-05-24 05:14:12 +0000  284 bytes for ./README.md
+2023-05-24 05:14:12 +0000  copying file ./Assets.car ... 
+2023-05-24 05:14:12 +0000  212303 bytes for ./Assets.car
+2023-05-24 05:14:12 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2023-05-24 05:14:12 +0000  6799 bytes for ./AppIcon76x76@2x~ipad.png
+2023-05-24 05:14:12 +0000  copying file ./id.lproj/Localizable.strings ... 
+2023-05-24 05:14:12 +0000  1063 bytes for ./id.lproj/Localizable.strings
+2023-05-24 05:14:12 +0000  copying file ./embedded.mobileprovision ... 
+2023-05-24 05:14:12 +0000  12128 bytes for ./embedded.mobileprovision
+2023-05-24 05:14:12 +0000  copying file ./Info.plist ... 
+2023-05-24 05:14:12 +0000  1492 bytes for ./Info.plist
+2023-05-24 05:14:12 +0000  copying file ./PkgInfo ... 
+2023-05-24 05:14:12 +0000  8 bytes for ./PkgInfo
+2023-05-24 05:14:12 +0000  /usr/bin/ditto exited with 0
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionEmbedProfileStep
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionInfoPlistStep
+2023-05-24 05:14:12 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2023-05-24 05:14:12 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2023-05-24 05:14:12 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2023-05-24 05:14:12 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionSymbolsStep
+2023-05-24 05:14:12 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionAppThinningStep
+2023-05-24 05:14:12 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionArchThinningStep
+2023-05-24 05:14:12 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root/Payload/Electriwise.app/Electriwise' '-verify_arch' 'arm64e'
+2023-05-24 05:14:12 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2023-05-24 05:14:12 +0000  Skipping architecture thinning for item "Electriwise" because arch "arm64e" wasn't found
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionODRStep
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionStripXattrsStep
+2023-05-24 05:14:12 +0000  Running /usr/bin/xattr '-crs' '/var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root/Payload/Electriwise.app'
+2023-05-24 05:14:12 +0000  /usr/bin/xattr exited with 0
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionCodesignStep
+2023-05-24 05:14:12 +0000  Entitlements for <IDEDistributionItem: 0x60001683f480; bundleID='com.github.davidmahbubi.electriwise', path='<DVTFilePath:0x60000e4dcd20:'/Users/davidmahbubi/Library/Developer/Xcode/Archives/2023-05-24/Electriwise 24-05-23 12.13.xcarchive/Products/Applications/Electriwise.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600022f9c1e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000038b5b80; name='Apple Development: David Mahbubi (6YWX298U4S)', hash='AB98CA2DC7766B70B62C2E8B88C299FC565AE890', serialNumber='5381C51D265119A6C61FCE7050CDC500', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-05-11 09:45:48 +0000''>', entitlements='{
+    "application-identifier" = "AHLML969C8.com.github.davidmahbubi.electriwise";
+    "com.apple.developer.team-identifier" = AHLML969C8;
+    "get-task-allow" = 1;
+}', teamID='AHLML969C8', identifier='com.github.davidmahbubi.electriwise', executablePath='<DVTFilePath:0x60000e507950:'/Users/davidmahbubi/Library/Developer/Xcode/Archives/2023-05-24/Electriwise 24-05-23 12.13.xcarchive/Products/Applications/Electriwise.app/Electriwise'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "AHLML969C8.com.github.davidmahbubi.electriwise";
+    "com.apple.developer.team-identifier" = AHLML969C8;
+    "get-task-allow" = 1;
+}
+2023-05-24 05:14:12 +0000  Entitlements for <IDEDistributionItem: 0x60001683f480; bundleID='com.github.davidmahbubi.electriwise', path='<DVTFilePath:0x60000e4dcd20:'/Users/davidmahbubi/Library/Developer/Xcode/Archives/2023-05-24/Electriwise 24-05-23 12.13.xcarchive/Products/Applications/Electriwise.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600022f9c1e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600007ba5fa0; name='Apple Development: David Mahbubi (6YWX298U4S)', hash='AB98CA2DC7766B70B62C2E8B88C299FC565AE890', serialNumber='5381C51D265119A6C61FCE7050CDC500', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-05-11 09:45:48 +0000''>', entitlements='{
+    "application-identifier" = "AHLML969C8.com.github.davidmahbubi.electriwise";
+    "com.apple.developer.team-identifier" = AHLML969C8;
+    "get-task-allow" = 1;
+}', teamID='AHLML969C8', identifier='com.github.davidmahbubi.electriwise', executablePath='<DVTFilePath:0x60000e507950:'/Users/davidmahbubi/Library/Developer/Xcode/Archives/2023-05-24/Electriwise 24-05-23 12.13.xcarchive/Products/Applications/Electriwise.app/Electriwise'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "AHLML969C8.com.github.davidmahbubi.electriwise";
+    "com.apple.developer.team-identifier" = AHLML969C8;
+    "get-task-allow" = 1;
+}
+2023-05-24 05:14:12 +0000  Writing entitlements for <IDEDistributionItem: 0x60001683f480; bundleID='com.github.davidmahbubi.electriwise', path='<DVTFilePath:0x60000e4dcd20:'/Users/davidmahbubi/Library/Developer/Xcode/Archives/2023-05-24/Electriwise 24-05-23 12.13.xcarchive/Products/Applications/Electriwise.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600022f9c1e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600007bd1130; name='Apple Development: David Mahbubi (6YWX298U4S)', hash='AB98CA2DC7766B70B62C2E8B88C299FC565AE890', serialNumber='5381C51D265119A6C61FCE7050CDC500', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2023-05-11 09:45:48 +0000''>', entitlements='{
+    "application-identifier" = "AHLML969C8.com.github.davidmahbubi.electriwise";
+    "com.apple.developer.team-identifier" = AHLML969C8;
+    "get-task-allow" = 1;
+}', teamID='AHLML969C8', identifier='com.github.davidmahbubi.electriwise', executablePath='<DVTFilePath:0x60000e507950:'/Users/davidmahbubi/Library/Developer/Xcode/Archives/2023-05-24/Electriwise 24-05-23 12.13.xcarchive/Products/Applications/Electriwise.app/Electriwise'>', hardenedRuntime='0'>'> to: /var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/entitlements~~~yyp3B8
+2023-05-24 05:14:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'AB98CA2DC7766B70B62C2E8B88C299FC565AE890' '--entitlements' '/var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/entitlements~~~yyp3B8' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root/Payload/Electriwise.app'
+2023-05-24 05:14:12 +0000  /var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root/Payload/Electriwise.app: replacing existing signature
+2023-05-24 05:14:12 +0000  /var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root/Payload/Electriwise.app: signed app bundle with Mach-O thin (arm64) [com.github.davidmahbubi.electriwise]
+2023-05-24 05:14:12 +0000  /usr/bin/codesign exited with 0
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionZipODRItemStep
+2023-05-24 05:14:12 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionCreateIPAStep
+2023-05-24 05:14:12 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root' '/var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Packages/Electriwise.ipa'
+2023-05-24 05:14:12 +0000  >>> Copying /var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root 
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/_CodeSignature/CodeResources ... 
+2023-05-24 05:14:12 +0000  4203 bytes for ./Payload/Electriwise.app/_CodeSignature/CodeResources
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/Electriwise ... 
+2023-05-24 05:14:12 +0000  269584 bytes for ./Payload/Electriwise.app/Electriwise
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/en.lproj/Localizable.strings ... 
+2023-05-24 05:14:12 +0000  1008 bytes for ./Payload/Electriwise.app/en.lproj/Localizable.strings
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/AppIcon60x60@2x.png ... 
+2023-05-24 05:14:12 +0000  5064 bytes for ./Payload/Electriwise.app/AppIcon60x60@2x.png
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/ApplianceModel.momd/VersionInfo.plist ... 
+2023-05-24 05:14:12 +0000  154 bytes for ./Payload/Electriwise.app/ApplianceModel.momd/VersionInfo.plist
+copying file ./Payload/Electriwise.app/ApplianceModel.momd/ApplianceModel.mom ... 
+2023-05-24 05:14:12 +0000  1910 bytes for ./Payload/Electriwise.app/ApplianceModel.momd/ApplianceModel.mom
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/README.md ... 
+2023-05-24 05:14:12 +0000  284 bytes for ./Payload/Electriwise.app/README.md
+copying file ./Payload/Electriwise.app/Assets.car ... 
+2023-05-24 05:14:12 +0000  212303 bytes for ./Payload/Electriwise.app/Assets.car
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/AppIcon76x76@2x~ipad.png ... 
+2023-05-24 05:14:12 +0000  6799 bytes for ./Payload/Electriwise.app/AppIcon76x76@2x~ipad.png
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/id.lproj/Localizable.strings ... 
+2023-05-24 05:14:12 +0000  1063 bytes for ./Payload/Electriwise.app/id.lproj/Localizable.strings
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/embedded.mobileprovision ... 
+2023-05-24 05:14:12 +0000  12128 bytes for ./Payload/Electriwise.app/embedded.mobileprovision
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/Info.plist ... 
+2023-05-24 05:14:12 +0000  1492 bytes for ./Payload/Electriwise.app/Info.plist
+2023-05-24 05:14:12 +0000  copying file ./Payload/Electriwise.app/PkgInfo ... 
+8 bytes for ./Payload/Electriwise.app/PkgInfo
+2023-05-24 05:14:12 +0000  /usr/bin/ditto exited with 0
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2023-05-24 05:14:12 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2023-05-24 05:14:12 +0000  IDEDistributionItem init <DVTFilePath:0x60000e47a5a0:'/var/folders/v6/rz06kfq57cx_wc6d3h5lvb140000gn/T/XcodeDistPipeline.~~~ZxDerZ/Root/Payload/Electriwise.app'>
+2023-05-24 05:14:12 +0000  Processing step: IDEDistributionCreateManifestStep
